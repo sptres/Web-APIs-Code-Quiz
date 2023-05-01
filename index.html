@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <section id="score-keeper" style="display: none">
+        <input type="button" value="View Scores" onclick="view_scores()"></br>
+        Score: <var id="score"></var>
+    </section>
+
+    <section id= "countdownTimer" style="display: none">
+        Time Remaining: <span id="timer"></span>
+    </section>
+    
+    </header>
+
+    <container>
+    <div id="quiz-home" class="none">
+        <h1>Code Quiz</h1>
+        <p>Answer the following code-related questions to test your knowledge.</p>
+        <p>75 seconds is given, 10 seconds penalty is given to each incorrect answers</p>
+        <p>Click the start button below when you're ready!</p>
+        <br>
+        <button id="startBtn">Start Quiz</button>
+    </div>
+    </container>
+
+        <div id="quiz-questions" style="display: none">
+            <h2 id="question"></h2>
+                <ul>
+                    <div id="choices">
+                        <button id="choiceA"></button>
+                    </div>
+                    <div>
+                        <button id="choiceB"></button>
+                    </div>
+                    <div>
+                        <button id="choiceC"></button>
+                    </div>
+                    <div>
+                        <button id="choiceD"></button>
+                    </div>
+                </ul>
+        </div>
+</body>
+
+<section id="quiz-post"></section>
+
+<div id="quiz-over" style="display:none">
+    <h2>Quiz Over</h2>
+    Your Score is: <var id="final_score"></var>
+    </br>
+    Initials: <input type="text" value="initials" id="initials">
+    </br>
+    <input type="button" value="submit" id="submit-initials" onclick="submit_score()">
+</div>
+
+<div id="high-scores-page" style="display: none">
+    <h2>High Scores</h2>
+    <div id="high-scores"></div>
+        <input type="button" value="Go Back" id="go_back" onclick="go_home()">
+        <input type="button" id="Clear Highscores" value ="clear" onclick="clear_hs()">
+</div>
+
+    
+<script src="script.js"></script>
+</html>
